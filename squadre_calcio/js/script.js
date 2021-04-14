@@ -7,22 +7,22 @@
 const squadreCalcio = [
     {
         'nome': 'Torino',
-        'punti': 0,
+        'punti_fatti': 0,
         'falli_subiti': 0
     },
     {
         'nome': 'Lazio',
-        'punti': 0,
+        'punti_fatti': 0,
         'falli_subiti': 0
     },
     {
         'nome': 'Fiorentina',
-        'punti': 0,
+        'punti_fatti': 0,
         'falli_subiti': 0
     },
     {
         'nome': 'Roma',
-        'punti': 0,
+        'punti_fatti': 0,
         'falli_subiti': 0
     }
 ]
@@ -32,12 +32,37 @@ for (let i = 0; i < squadreCalcio.length; i++){
 
     let thisSquadra = squadreCalcio[i];
     
-    thisSquadra.punti = getRandomNumber(1, 20);
+    thisSquadra.punti_fatti = getRandomNumber(1, 20);
     
     
     thisSquadra.falli_subiti = getRandomNumber(1, 10)
 }
 console.log(squadreCalcio)
+
+
+let squadre;
+
+for (let i = 0; i < squadreCalcio.length; i++) {
+
+    let thisSquadra = squadreCalcio[i];
+
+    const {nome, falli_subiti} = thisSquadra;
+
+    squadre = {
+        nome,
+        falli_subiti
+    }
+    
+    console.log('squadre nuove ', squadre )
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -46,6 +71,10 @@ console.log(squadreCalcio)
 
 
 // Funzione per generare un numero random
+//
+// min -> numero intero minimo
+// max -> numero intero massimo
+
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;;
   }
