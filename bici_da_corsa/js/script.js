@@ -37,7 +37,7 @@ for (let i = 0; i < arrayBici.length; i++) {
 
 let ProprietaBiciPiuLeggera = `
 
-    <h2> La bici più leggera è ${biciPiuLeggera.nome} e pesa ${biciPiuLeggera.peso} kg </h2>
+    <p> La bici più leggera è ${biciPiuLeggera.nome} e pesa ${biciPiuLeggera.peso} kg </p>
 `;
 
 document.getElementById('bici').innerHTML = ProprietaBiciPiuLeggera
