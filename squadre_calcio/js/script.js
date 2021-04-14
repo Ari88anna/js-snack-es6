@@ -40,7 +40,9 @@ for (let i = 0; i < squadreCalcio.length; i++){
 console.log(squadreCalcio)
 
 
-let squadre ;
+
+
+let squadre = [] ;
 
 for (let i = 0; i < squadreCalcio.length; i++) {
 
@@ -48,12 +50,13 @@ for (let i = 0; i < squadreCalcio.length; i++) {
 
     const {nome, falli_subiti} = thisSquadra;
 
-    squadre = [
-        {
-            nome,
-            falli_subiti
-        }
-    ]            
+    let nuoveSquadre = {
+
+        nome,
+        falli_subiti
+    }     
+    
+    squadre.push(nuoveSquadre)
 }
 
 
